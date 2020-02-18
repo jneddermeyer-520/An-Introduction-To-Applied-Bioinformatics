@@ -129,7 +129,7 @@ The alignment at the root node is our multiple sequence alignment.
 
 ### Building the guide tree <link src='2d97eb'/>
 
-Let's address the first of our outstanding questions. I mentioned above that *we need an alignment to build a good tree*. The key word here is *good*. We can build a very rough tree - one that we would never want to present as representing the actual relationships between the sequences in question - without first aligning the sequences. Remember that building a UPGMA tree requires only a distance matrix, so if we can find a non-alignment-dependent way to compute distances between the sequences, we can build a rough UPGMA tree from them.
+Let's address the first of our outstanding questions. I mentioned above that *we need an alignment to build a good tree*. The key word here is *good*. We can build a very rough tree - one that we would never want to present as representing the actual relationships between the sequences in question - without first aligning the sequences. Remember that building a UPGMA tree (I'm not sure if this tree type is defined in the chapter or earlier in the book) requires only a distance matrix, so if we can find a non-alignment-dependent way to compute distances between the sequences, we can build a rough UPGMA tree from them.
 
 Let's compute distances between the sequences based on their *word* composition. We'll define a *word* here as `k` adjacent characters in the sequence. We can then define a function that will return all of the words in a sequence as follows. These words can be defined as being overlapping, or non-overlapping. We'll go with overlapping for this example, as the more words we have, the better our guide tree should be.
 
